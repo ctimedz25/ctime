@@ -2,11 +2,12 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiMenu, FiMail } from "react-icons/fi";
+import { FiMenu, FiMail, FiChevronDown } from "react-icons/fi";
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null);
   let timeoutId = useRef(null);
 
   const handleMouseEnter = (menu) => {
@@ -18,6 +19,10 @@ export default function Navbar() {
     timeoutId.current = setTimeout(() => {
       setOpenDropdown(null);
     }, 199);
+  };
+
+  const toggleSubmenu = (menu) => {
+    setOpenMobileSubmenu(openMobileSubmenu === menu ? null : menu);
   };
 
   return (
@@ -64,24 +69,19 @@ export default function Navbar() {
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </button>
 
+                {/* Desktop Dropdown */}
                 {openDropdown === item && (
-                  <div className="absolute left-0 top-full bg-white shadow-lg rounded-lg mt-2 w-48 transition-opacity duration-200 ease-in-out opacity-100 visible">
+                  <div className="absolute left-0 top-full bg-white shadow-lg rounded-lg mt-2 w-48">
                     <ul className="py-2 text-gray-800 text-sm">
                       {item === "accueil" && (
                         <>
                           <li>
-                            <Link
-                              href="/missions"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
+                            <Link href="/missions" className="block px-4 py-2 hover:bg-gray-200">
                               Missions et visions
                             </Link>
                           </li>
                           <li>
-                            <Link
-                              href="/quality-policy"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
+                            <Link href="/quality-policy" className="block px-4 py-2 hover:bg-gray-200">
                               Politique Qualité
                             </Link>
                           </li>
@@ -89,54 +89,16 @@ export default function Navbar() {
                       )}
                       {item === "services" && (
                         <>
-                          <li>
-                            <Link
-                              href="/etalo"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
-                              Etalonnage Dimensionnel
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/services/labo2"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
-                              Essais Mécaniques
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/services/labo1"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
-                              Métrologie Dimensionnelle
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Retro"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
-                              Rétroconception
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/blog"
-                              className="block px-4 py-2 hover:bg-gray-200"
-                            >
-                              Programmes de Formation
-                            </Link>
-                          </li>
+                          <li><Link href="/etalo" className="block px-4 py-2 hover:bg-gray-200">Etalonnage Dimensionnel</Link></li>
+                          <li><Link href="/services/labo2" className="block px-4 py-2 hover:bg-gray-200">Essais Mécaniques</Link></li>
+                          <li><Link href="/services/labo1" className="block px-4 py-2 hover:bg-gray-200">Métrologie Dimensionnelle</Link></li>
+                          <li><Link href="/Retro" className="block px-4 py-2 hover:bg-gray-200">Rétroconception</Link></li>
+                          <li><Link href="/blog" className="block px-4 py-2 hover:bg-gray-200">Programmes de Formation</Link></li>
                         </>
                       )}
                       {item === "actualites" && (
                         <li>
-                          <Link
-                            href="/Actualites"
-                            className="block px-4 py-2 hover:bg-gray-200"
-                          >
+                          <Link href="/Actualites" className="block px-4 py-2 hover:bg-gray-200">
                             Événements
                           </Link>
                         </li>
@@ -147,7 +109,6 @@ export default function Navbar() {
               </div>
             ))}
 
-            {/* Extra Links */}
             <Link href="/cart">
               <button className="py-2 px-4 text-gray-800 font-semibold rounded-lg hover:text-white hover:bg-red-700 transition-all">
                 À Propos de Nous
@@ -210,41 +171,117 @@ export default function Navbar() {
               className="md:hidden bg-white shadow-lg border-t border-gray-200"
             >
               <ul className="flex flex-col text-gray-800 text-sm">
-                {["accueil", "services", "actualites"].map((item) => (
-                  <li key={item}>
-                    <Link
-                      href={`/${item}`}
-                      className="block px-4 py-3 hover:bg-gray-100"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.charAt(0).toUpperCase() + item.slice(1)}
-                    </Link>
-                  </li>
-                ))}
+                {/* Accueil */}
                 <li>
-                  <Link
-                    href="/cart"
-                    className="block px-4 py-3 hover:bg-gray-100"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <button
+                    onClick={() => toggleSubmenu("accueil")}
+                    className="w-full flex justify-between items-center px-4 py-3 hover:bg-gray-100 font-semibold"
                   >
+                    Accueil
+                    <FiChevronDown
+                      className={`transition-transform ${
+                        openMobileSubmenu === "accueil" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openMobileSubmenu === "accueil" && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-6 bg-gray-50"
+                      >
+                        <li>
+                          <Link href="/missions" className="block py-2" onClick={() => setMobileMenuOpen(false)}>
+                            Missions et visions
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/quality-policy" className="block py-2" onClick={() => setMobileMenuOpen(false)}>
+                            Politique Qualité
+                          </Link>
+                        </li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Services */}
+                <li>
+                  <button
+                    onClick={() => toggleSubmenu("services")}
+                    className="w-full flex justify-between items-center px-4 py-3 hover:bg-gray-100 font-semibold"
+                  >
+                    Services
+                    <FiChevronDown
+                      className={`transition-transform ${
+                        openMobileSubmenu === "services" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openMobileSubmenu === "services" && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-6 bg-gray-50"
+                      >
+                        <li><Link href="/etalo" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Etalonnage Dimensionnel</Link></li>
+                        <li><Link href="/services/labo2" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Essais Mécaniques</Link></li>
+                        <li><Link href="/services/labo1" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Métrologie Dimensionnelle</Link></li>
+                        <li><Link href="/Retro" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Rétroconception</Link></li>
+                        <li><Link href="/blog" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Programmes de Formation</Link></li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Actualités */}
+                <li>
+                  <button
+                    onClick={() => toggleSubmenu("actualites")}
+                    className="w-full flex justify-between items-center px-4 py-3 hover:bg-gray-100 font-semibold"
+                  >
+                    Actualités
+                    <FiChevronDown
+                      className={`transition-transform ${
+                        openMobileSubmenu === "actualites" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {openMobileSubmenu === "actualites" && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-6 bg-gray-50"
+                      >
+                        <li>
+                          <Link href="/Actualites" className="block py-2" onClick={() => setMobileMenuOpen(false)}>
+                            Événements
+                          </Link>
+                        </li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Other Pages */}
+                <li>
+                  <Link href="/cart" className="block px-4 py-3 hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>
                     À Propos de Nous
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/Magazine"
-                    className="block px-4 py-3 hover:bg-gray-100 text-red-600 font-semibold"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href="/Magazine" className="block px-4 py-3 hover:bg-gray-100 text-red-600 font-semibold" onClick={() => setMobileMenuOpen(false)}>
                     Magazine
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/iso286"
-                    className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href="/iso286" className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold" onClick={() => setMobileMenuOpen(false)}>
                     Outils
                   </Link>
                 </li>
