@@ -281,9 +281,16 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/iso286" className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold" onClick={() => setMobileMenuOpen(false)}>
-                    Outils
-                  </Link>
+{/*
+<Link 
+  href="/iso286" 
+  className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold" 
+  onClick={() => setMobileMenuOpen(false)}
+>
+  Outils
+</Link>
+*/}
+
                 </li>
               </ul>
             </motion.div>
@@ -291,7 +298,7 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
 
-      {/* Floating Contact Button */}
+
       <Link href="/contact">
         <motion.button
           className="fixed bottom-16 right-6 md:bottom-10 md:right-4 bg-red-700 text-white p-4 rounded-full shadow-lg hover:bg-red-800 transition-all z-[9999]"
