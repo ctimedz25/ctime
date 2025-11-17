@@ -122,7 +122,7 @@ export default function Navbar() {
             </Link>
 
             <Link href="/iso286">
-{/*              <motion.button
+            <motion.button
                 initial={{ scale: 1 }}
                 animate={{
                   scale: [1, 1.15, 1],
@@ -147,7 +147,7 @@ export default function Navbar() {
                            transition-all duration-300 shadow-lg"
               >
                 Outils
-              </motion.button>*/}
+              </motion.button>
             </Link>
           </div>
 
@@ -281,7 +281,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-{/*
+
 <Link 
   href="/iso286" 
   className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold" 
@@ -289,7 +289,7 @@ export default function Navbar() {
 >
   Outils
 </Link>
-*/}
+
 
                 </li>
               </ul>
