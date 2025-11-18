@@ -121,34 +121,7 @@ export default function Navbar() {
               </button>
             </Link>
 
-            <Link href="/iso286">
-            <motion.button
-                initial={{ scale: 1 }}
-                animate={{
-                  scale: [1, 1.15, 1],
-                  boxShadow: [
-                    "0 0 20px rgba(229, 57, 53, 0.5)",
-                    "0 0 50px rgba(229, 57, 53, 0.9)",
-                    "0 0 20px rgba(229, 57, 53, 0.5)",
-                  ],
-                }}
-                transition={{
-                  duration: 1,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.2,
-                  boxShadow: "0 0 60px rgba(229, 57, 53, 1)",
-                }}
-                className="py-2 px-6 font-bold text-white rounded-lg 
-                           bg-[#E53935]
-                           border-2 border-[#E53935]
-                           transition-all duration-300 shadow-lg"
-              >
-                Outils
-              </motion.button>
-            </Link>
+
           </div>
 
           {/* Hamburger Button */}
