@@ -282,13 +282,7 @@ export default function Navbar() {
                 </li>
                 <li>
 
-<Link 
-  href="/iso286" 
-  className="block px-4 py-3 hover:bg-gray-100 text-[#E53935] font-bold" 
-  onClick={() => setMobileMenuOpen(false)}
->
-  Outils
-</Link>
+
 
 
                 </li>
