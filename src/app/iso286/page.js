@@ -8575,28 +8575,29 @@ export default function Iso286Analyzer() {
     
     // Résultats alésage
     safeSetTextContent(holeToleranceCodeRef, holeTolerance || "-");
-    safeSetTextContent(holeESRef, `${holeUpper >= 0 ? "+" : ""}${holeUpper.toFixed(3)} mm`);
-    safeSetTextContent(holeEIRef, `${holeLower >= 0 ? "+" : ""}${holeLower.toFixed(3)} mm`);
-    safeSetTextContent(holeToleranceFieldRef, `${holeToleranceValue.toFixed(3)} mm`);
+    safeSetTextContent(holeESRef, `${holeUpper >= 0 ? "+" : ""}${holeUpper.toFixed(3)} μm`);
+    safeSetTextContent(holeEIRef, `${holeLower >= 0 ? "+" : ""}${holeLower.toFixed(3)} μm`);
+    safeSetTextContent(holeToleranceFieldRef, `${holeToleranceValue.toFixed(3)} μm`);
     safeSetTextContent(holeMinRef, `${holeMinSize.toFixed(3)} mm`);
     safeSetTextContent(holeMaxRef, `${holeMaxSize.toFixed(3)} mm`);
 
     // Résultats arbre
     safeSetTextContent(shaftToleranceCodeRef, shaftTolerance || "-");
-    safeSetTextContent(shaftESRef, `${shaftUpper >= 0 ? "+" : ""}${shaftUpper.toFixed(3)} mm`);
-    safeSetTextContent(shaftEIRef, `${shaftLower >= 0 ? "+" : ""}${shaftLower.toFixed(3)} mm`);
-    safeSetTextContent(shaftToleranceFieldRef, `${shaftToleranceValue.toFixed(3)} mm`);
+    safeSetTextContent(shaftESRef, `${shaftUpper >= 0 ? "+" : ""}${shaftUpper.toFixed(3)} μm`);
+    safeSetTextContent(shaftEIRef, `${shaftLower >= 0 ? "+" : ""}${shaftLower.toFixed(3)} μm`);
+    safeSetTextContent(shaftToleranceFieldRef, `${shaftToleranceValue.toFixed(3)} μm`);
     safeSetTextContent(shaftMinRef, `${shaftMinSize.toFixed(3)} mm`);
     safeSetTextContent(shaftMaxRef, `${shaftMaxSize.toFixed(3)} mm`);
 
     // Caractéristiques de l'ajustement (seulement si les deux sont sélectionnés)
-    if (holeTolerance && shaftTolerance) {
-      safeSetTextContent(clearanceMaxRef, `${maxClearance.toFixed(3)} mm`);
-      safeSetTextContent(clearanceMinRef, `${minClearance.toFixed(3)} mm`);
-    } else {
-      safeSetTextContent(clearanceMaxRef, "-");
-      safeSetTextContent(clearanceMinRef, "-");
-    }
+ if (holeTolerance && shaftTolerance) {
+  safeSetTextContent(clearanceMaxRef, `${(maxClearance * 1000).toFixed(0)} µm`);
+  safeSetTextContent(clearanceMinRef, `${(minClearance * 1000).toFixed(0)} µm`);
+} else {
+  safeSetTextContent(clearanceMaxRef, "-");
+  safeSetTextContent(clearanceMinRef, "-");
+}
+
 
     // Type d'ajustement
     safeSetTextContent(fitTypeElementRef, fitType);
@@ -8829,20 +8830,21 @@ export default function Iso286Analyzer() {
             </div>
 
             {/* Jeu */}
-            <div className="p-6 rounded-xl bg-white/10 border border-white/20">
-              <h3 className="text-white font-semibold mb-4">Jeu maximum</h3>
-              
-              <div className="space-y-3">
-                <div className="flex justify-between items-center py-2 border-b border-white/20">
-                  <span className="text-gray-300">Jeu max</span>
-                  <span className="text-white font-mono" ref={clearanceMaxRef}>0.000 µm</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-gray-300">Jeu min</span>
-                  <span className="text-white font-mono" ref={clearanceMinRef}>0.000 µm</span>
-                </div>
-              </div>
-            </div>
+           <div className="p-6 rounded-xl bg-white/10 border border-white/20">
+  <h3 className="text-white font-semibold mb-4">Jeu maximum</h3>
+  
+  <div className="space-y-3">
+    <div className="flex justify-between items-center py-2 border-b border-white/20">
+      <span className="text-gray-300">Jeu max</span>
+      <span className="text-white font-mono" ref={clearanceMaxRef}>0 µm</span>
+    </div>
+    <div className="flex justify-between items-center py-2">
+      <span className="text-gray-300">Jeu min</span>
+      <span className="text-white font-mono" ref={clearanceMinRef}>0 µm</span>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
 
