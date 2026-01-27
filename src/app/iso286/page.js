@@ -8557,13 +8557,13 @@ export default function Iso286Analyzer() {
     if (holeTolerance && shaftTolerance) {
       if (minClearance > 0) {
         fitType = "Ajustement avec jeu";
-        fitClass = "bg-green-500/20 border-green-500 text-green-300";
+        fitClass = "bg-green-500/20 border-green-500 text-green-300 text-white text-xl";
       } else if (maxClearance < 0) {
         fitType = "Ajustement avec serrage";
-        fitClass = "bg-red-500/20 border-red-500 text-red-300";
+        fitClass = "bg-red-500/20 border-red-500 text-red-300 text-white text-xl";
       } else {
         fitType = "Ajustement incertain";
-        fitClass = "bg-orange-500/20 border-orange-500 text-orange-300";
+        fitClass = "bg-orange-500/20 border-orange-500 text-orange-300 text-white text-xl";
       }
     } else {
       fitType = "Analyse partielle - Sélectionnez les deux tolérances pour le type d'ajustement";
