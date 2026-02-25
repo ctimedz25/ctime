@@ -101,7 +101,7 @@ const EtalonnagePage = () => {
             data-width="700"
             data-height="425"
             data-title="Magazine CTIME English"
-            data-href="https://online.anyflip.com/gmcxh/lexc/index.html"
+            data-href="https://online.anyflip.com/gmcxh/bpfq/index.html"
             href="https://online.anyflip.com/gmcxh/bpfq/index.html"
             className="block overflow-hidden rounded-xl shadow-2xl border-4 border-white/20"
           >
