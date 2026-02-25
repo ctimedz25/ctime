@@ -75,7 +75,7 @@ const EtalonnagePage = () => {
           </a>
 
           <p className="text-white mt-3 text-base font-semibold tracking-wide">
-            French Edition
+            First Edition
           </p>
         </motion.div>
 
@@ -102,18 +102,18 @@ const EtalonnagePage = () => {
             data-height="425"
             data-title="Magazine CTIME English"
             data-href="https://online.anyflip.com/gmcxh/lexc/index.html"
-            href="https://online.anyflip.com/gmcxh/lexc/index.html"
+            href="https://online.anyflip.com/gmcxh/bpfq/index.html"
             className="block overflow-hidden rounded-xl shadow-2xl border-4 border-white/20"
           >
             <img
-              src="/eng.png"
+              src="/second_img.png"
               alt="Magazine CTIME English"
               className="object-cover w-[350px] h-auto transform transition-transform duration-500 group-hover:scale-110"
             />
           </a>
 
           <p className="text-white mt-3 text-base font-semibold tracking-wide">
-            English Edition
+            Second Edition
           </p>
         </motion.div>
       </motion.div>
