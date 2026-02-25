@@ -7,6 +7,11 @@ import Head from 'next/head';
 export default function Actualites() {
   const [articles, setArticles] = useState([
     {
+      "image": "/Salon mechanica 2026.png",
+      "title": "Salon MECHANICA 2026",
+      "shortText": "La participation du CTIME s’inscrit pleinement dans sa mission de soutien au développement de l’industrie mécanique nationale, en particulier au service de la filière automobile, de la sous-traitance industrielle et du marché de la pièce de rechange (PDR)...",
+      "fullText": "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
+    }, {
       title: "Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
       date: "Actualités / Par admin",
       img: "/visite.png",
