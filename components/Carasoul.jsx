@@ -18,6 +18,12 @@ export function ModernCarousel() {
 
   const slides = [
     {
+      "image": "/porte_ouvert_journe.png",
+      "title": " ",
+      "shortText": "Le CTIME vous invite à participer à sa Journée Portes Ouvertes, une occasion unique de découvrir ses services, ses démonstrations techniques et les métiers du contrôle de la qualité et de la métrologie.",
+      "fullText": "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. ⚠️ Nombre de places limité afin de favoriser des échanges qualitatifs."
+    },
+    {
       "image": "/Salon mechanica 2026.png",
       "title": "Salon MECHANICA 2026",
       "shortText": "La participation du CTIME s’inscrit pleinement dans sa mission de soutien au développement de l’industrie mécanique nationale, en particulier au service de la filière automobile, de la sous-traitance industrielle et du marché de la pièce de rechange (PDR)...",

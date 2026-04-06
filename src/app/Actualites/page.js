@@ -7,13 +7,18 @@ import Head from 'next/head';
 export default function Actualites() {
   const [articles, setArticles] = useState([
     {
-     
+      title: "Journée Portes Ouvertes - 27 Avril 2026",
+      date: "Actualités / Par admin",
+      img: "/porte_ouvert_journe.png",
+      description: "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. Nombre de places limité afin de favoriser des échanges qualitatifs.",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd8NtyGIZ93wXmR_WaqkUYTQH7t4yY3qb4xOSO6l0ghig4Eaw/viewform?usp=dialog"
+    },
+    {
       title: "Salon MECHANICA 2026",
-        date: "Actualités / Par admin",
-       img: "/Salon mechanica 2026.png",
+      date: "Actualités / Par admin",
+      img: "/Salon mechanica 2026.png",
       description: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
     },
-    
     {
       title: "Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
       date: "Actualités / Par admin",
@@ -89,8 +94,8 @@ export default function Actualites() {
   ]);
 
   useEffect(() => {
-    const articles = document.querySelectorAll('.article');
-    articles.forEach((article, index) => {
+    const articlesElements = document.querySelectorAll('.article');
+    articlesElements.forEach((article, index) => {
       article.style.opacity = 0;
       article.style.transform = 'translateY(20px)';
       setTimeout(() => {
@@ -130,6 +135,16 @@ export default function Actualites() {
                 <h2 className="text-2xl font-semibold text-white mb-2">{article.title}</h2>
                 <p className="text-gray-200 text-sm mb-4">{article.date}</p>
                 <p className="text-gray-200">{article.description}</p>
+                {article.registrationLink && (
+                  <a
+                    href={article.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition"
+                  >
+                    S'inscrire
+                  </a>
+                )}
               </div>
             </article>
           ))}
