@@ -23,6 +23,13 @@ export function ModernCarousel() {
       "shortText": "Le CTIME vous invite à participer à sa Journée Portes Ouvertes, une occasion unique de découvrir ses services, ses démonstrations techniques et les métiers du contrôle de la qualité et de la métrologie.",
       "fullText": "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. ⚠️ Nombre de places limité afin de favoriser des échanges qualitatifs."
     },
+
+    {
+      "image": "/visite_ministre.png",
+      "title": "Visite de Monsieur le Ministre de l’Industrie au CTIME",
+      "shortText": "Visite officielle de Monsieur le Ministre de l’Industrie au centre industriel des industries mécaniques et de transformation des métaux, avec présentation de ses capacités et de son rôle dans le soutien du secteur industriel.",
+      "fullText": "Monsieur le Ministre de l’Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d’échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
+    },
     {
       "image": "/Salon mechanica 2026.png",
       "title": "Salon MECHANICA 2026",

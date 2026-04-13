@@ -14,11 +14,18 @@ export default function Actualites() {
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd8NtyGIZ93wXmR_WaqkUYTQH7t4yY3qb4xOSO6l0ghig4Eaw/viewform?usp=dialog"
     },
     {
+      title: "Visite de Monsieur le Ministre de l’Industrie au CTIME le 09 Avril 2026",
+      date: "Actualités / Par admin",
+      img: "/visite_ministre.png",
+      description: "Monsieur le Ministre de l’Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d’échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
+    },
+    {
       title: "Salon MECHANICA 2026",
       date: "Actualités / Par admin",
       img: "/Salon mechanica 2026.png",
       description: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
     },
+    
     {
       title: "Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
       date: "Actualités / Par admin",
