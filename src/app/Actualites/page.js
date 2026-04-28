@@ -7,9 +7,16 @@ import Head from 'next/head';
 export default function Actualites() {
   const [articles, setArticles] = useState([
     {
+      title: "Journée Portes Ouvertes CTIME 2026",
+      date: "Actualités / Par admin",
+      img: "/retour_en_images_jpo.png",
+      description: "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d’échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l’étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s’est déroulée dans un climat d’interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu’acteur de référence au service de l’industrie.",
+    },
+    {
       title: "Journée Portes Ouvertes - 27 Avril 2026",
       date: "Actualités / Par admin",
       img: "/porte_ouvert_journe.png",
+
       description: "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. Nombre de places limité afin de favoriser des échanges qualitatifs.",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd8NtyGIZ93wXmR_WaqkUYTQH7t4yY3qb4xOSO6l0ghig4Eaw/viewform?usp=dialog"
     },
@@ -25,7 +32,7 @@ export default function Actualites() {
       img: "/Salon mechanica 2026.png",
       description: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
     },
-    
+
     {
       title: "Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
       date: "Actualités / Par admin",

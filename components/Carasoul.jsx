@@ -18,6 +18,12 @@ export function ModernCarousel() {
 
   const slides = [
     {
+      "image": "/retour_en_images_jpo.png",
+      "title": "Journée Portes Ouvertes CTIME 2026",
+      "shortText": "Une participation remarquable et des échanges enrichissants lors de la Journée Portes Ouvertes organisée par le CTIME le 27 avril 2026.",
+      "fullText": "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d’échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l’étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s’est déroulée dans un climat d’interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu’acteur de référence au service de l’industrie."
+    },
+    {
       "image": "/porte_ouvert_journe.png",
       "title": " ",
       "shortText": "Le CTIME vous invite à participer à sa Journée Portes Ouvertes, une occasion unique de découvrir ses services, ses démonstrations techniques et les métiers du contrôle de la qualité et de la métrologie.",
