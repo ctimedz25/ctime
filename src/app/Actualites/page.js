@@ -7,37 +7,42 @@ import Head from 'next/head';
 export default function Actualites() {
   const [articles, setArticles] = useState([
     {
+      title: "Séminaire-Formatif : Sciences des Matériaux",
+      date: "Actualités / Par admin",
+      img: "/formation_sciences_materiaux.png",
+      description: "Cette formation est destinée aux professionnels de l'industrie, de la qualité, de la maintenance et des laboratoires d'essais souhaitant renforcer leurs compétences en sciences des matériaux. Elle combine des apports théoriques et des travaux pratiques portant sur les propriétés des matériaux, les méthodes d'essais mécaniques et l'interprétation des résultats, tout en intégrant les exigences des référentiels normatifs. Public cible : ingénieurs matériaux, mécanique, production et procédés, responsables Qualité et Maintenance, personnels des laboratoires d'essais et de contrôle, étudiants et jeunes diplômés, ainsi que tout professionnel impliqué dans la sélection, l'évaluation ou la qualification des matériaux. Une formation pratique et interactive permettant d'acquérir des compétences directement applicables en milieu industriel, dispensée par les experts du CTIME. Nombre de places limité par session afin de garantir un accompagnement personnalisé et des échanges de qualité.",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeo5KXXN7m1GE0IyI1P3_IV5R_xr5-UO8rMzoSBD2pcG0f7Ow/viewform?usp=dialog"
+    },
+    {
       title: "Journée Portes Ouvertes CTIME 2026",
       date: "Actualités / Par admin",
       img: "/retour_en_images_jpo.png",
-      description: "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d’échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l’étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s’est déroulée dans un climat d’interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu’acteur de référence au service de l’industrie.",
+      description: "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d'échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l'étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s'est déroulée dans un climat d'interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu'acteur de référence au service de l'industrie.",
     },
     {
       title: "Journée Portes Ouvertes - 27 Avril 2026",
       date: "Actualités / Par admin",
       img: "/porte_ouvert_journe.png",
-
-      description: "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. Nombre de places limité afin de favoriser des échanges qualitatifs.",
+      description: "Cette journée est dédiée aux professionnels de l'industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d'entreprise industriels, professionnels de l'automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d'Études, techniciens métrologie et contrôle, responsables R&D. Une journée d'échanges techniques, de networking et de partage d'expertise pour renforcer vos démarches qualité et performance industrielle. Nombre de places limité afin de favoriser des échanges qualitatifs.",
       registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd8NtyGIZ93wXmR_WaqkUYTQH7t4yY3qb4xOSO6l0ghig4Eaw/viewform?usp=dialog"
     },
     {
-      title: "Visite de Monsieur le Ministre de l’Industrie au CTIME le 09 Avril 2026",
+      title: "Visite de Monsieur le Ministre de l'Industrie au CTIME le 09 Avril 2026",
       date: "Actualités / Par admin",
       img: "/visite_ministre.png",
-      description: "Monsieur le Ministre de l’Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d’échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
+      description: "Monsieur le Ministre de l'Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d'échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
     },
     {
       title: "Salon MECHANICA 2026",
       date: "Actualités / Par admin",
       img: "/Salon mechanica 2026.png",
-      description: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
+      description: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l'écosystème automobile et de promouvoir des solutions techniques contribuant à l'amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
     },
-
     {
-      title: "Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
+      title: "Visite pédagogique de l'Institut d'Optique et de Mécanique de Précision au CTIME",
       date: "Actualités / Par admin",
       img: "/visite.png",
-      description: "Nous avons eu le plaisir d’accueillir au CTIME un groupe d’étudiants accompagnés de leurs professeurs pour une visite technique immersive. Au programme : démonstrations d’essais mécaniques, étalonnage d’instruments de précision, métrologie appliquée et rétro-ingénierie. Une journée riche en échanges et en découvertes, qui illustre parfaitement notre engagement à rapprocher le monde académique de l’univers industriel."
+      description: "Nous avons eu le plaisir d'accueillir au CTIME un groupe d'étudiants accompagnés de leurs professeurs pour une visite technique immersive. Au programme : démonstrations d'essais mécaniques, étalonnage d'instruments de précision, métrologie appliquée et rétro-ingénierie. Une journée riche en échanges et en découvertes, qui illustre parfaitement notre engagement à rapprocher le monde académique de l'univers industriel."
     },
     {
       title: "Inauguration du complexe FONDERIE EURO MOTEUR",
@@ -73,7 +78,7 @@ export default function Actualites() {
       title: "Étude de cas sur l'étalonnage avancé",
       date: "Services : Métrologie dimensionnelle / Par admin",
       img: "/150.jpg",
-      description: "En 2023, le CTIME a réalisé un projet d’étalonnage avancé des instruments de mesure pour un client majeur dans le secteur de l’énergie, garantissant des résultats précis et fiables."
+      description: "En 2023, le CTIME a réalisé un projet d'étalonnage avancé des instruments de mesure pour un client majeur dans le secteur de l'énergie, garantissant des résultats précis et fiables."
     },
     {
       title: "Formation en métrologie",
@@ -88,22 +93,22 @@ export default function Actualites() {
       description: "Le CTIME a récemment participé aux journées techniques sur le développement des compétences locales organisées à Oran, mettant en avant les innovations dans le secteur industriel."
     },
     {
-      title: "Journée d’étude sur l’IA dans l’industrie",
+      title: "Journée d'étude sur l'IA dans l'industrie",
       date: "Actualités / Par admin",
       img: "/153.jpg",
-      description: "Le 15 septembre 2023, le CTIME a participé à une journée d’étude sur l’utilisation de l’intelligence artificielle dans les processus industriels, organisée par le Ministère de l'Industrie."
+      description: "Le 15 septembre 2023, le CTIME a participé à une journée d'étude sur l'utilisation de l'intelligence artificielle dans les processus industriels, organisée par le Ministère de l'Industrie."
     },
     {
       title: "Services de mesure et d'inspection",
       date: "Services : Métrologie dimensionnelle / Par admin",
       img: "/154.png",
-      description: "Le CTIME continue d’offrir des services de mesure et d’inspection, avec des rapports détaillés pour toutes les tailles de pièces, que ce soit en laboratoire ou sur site."
+      description: "Le CTIME continue d'offrir des services de mesure et d'inspection, avec des rapports détaillés pour toutes les tailles de pièces, que ce soit en laboratoire ou sur site."
     },
     {
       title: "Rencontre sur les innovations technologiques",
       date: "Actualités / Par admin",
       img: "/155.jpg",
-      description: "Le 01 août 2023, le CTIME a participé à une rencontre sur les innovations technologiques organisée par l’Université de Constantine 3, favorisant les échanges entre chercheurs et industriels."
+      description: "Le 01 août 2023, le CTIME a participé à une rencontre sur les innovations technologiques organisée par l'Université de Constantine 3, favorisant les échanges entre chercheurs et industriels."
     }
   ]);
 
@@ -136,13 +141,21 @@ export default function Actualites() {
               className="article bg-white/10 shadow-xl rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-red-500/50"
               key={index}
             >
-              <div className="relative w-full h-60">
+              {/* 
+                Fix: no fixed-height box anymore. The image renders at full width
+                and its height is computed automatically from its own natural
+                aspect ratio (h-auto), so the ENTIRE photo/banner is always shown —
+                no cropping, no black bars. Card heights will vary slightly
+                between articles depending on each image's real proportions.
+              */}
+              <div className="relative w-full">
                 <Image
                   src={article.img}
                   alt={article.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-lg"
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  className="w-full h-auto rounded-t-lg"
                 />
               </div>
               <div className="p-6 text-center">
@@ -165,7 +178,7 @@ export default function Actualites() {
         </div>
 
         <footer className="text-center mt-10 text-gray-200">
-          <p className="text-lg font-semibold">CTIME - Centre Technique Industriel des Industries Mécaniques & Transformatrices des Métaux</p>
+          <p className="text-lg font-semibold">CTIME - Centre Technique Industriel des Industries Mécaniques &amp; Transformatrices des Métaux</p>
         </footer>
       </main>
     </div>

@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 const detailsLink = "/Actualites";
 
 export function ModernCarousel() {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showFullText, setShowFullText] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -18,35 +19,41 @@ export function ModernCarousel() {
 
   const slides = [
     {
-      "image": "/retour_en_images_jpo.png",
-      "title": "Journée Portes Ouvertes CTIME 2026",
-      "shortText": "Une participation remarquable et des échanges enrichissants lors de la Journée Portes Ouvertes organisée par le CTIME le 27 avril 2026.",
-      "fullText": "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d’échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l’étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s’est déroulée dans un climat d’interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu’acteur de référence au service de l’industrie."
+      image: "/formation_sciences_materiaux.png",
+      title: "Séminaire-Formatif : Sciences des Matériaux",
+      shortText: "Le CTIME organise une Une formation de 3 jours pour maîtriser les fondamentaux des sciences des matériaux et des essais mécaniques.",
+      fullText: "Le Laboratoire des Essais Mécaniques du Centre Technique Industriel de la Mécanique (CTIME) organise un séminaire-formatif consacré aux sciences des matériaux. Cette formation de trois jours vise à fournir aux participants les connaissances fondamentales sur la structure, les propriétés et le comportement des matériaux, ainsi que les principales méthodes d'essais mécaniques et l'interprétation de leurs résultats. Le programme comprend des cours théoriques illustrés, des travaux pratiques en laboratoire et des exercices portant sur les référentiels normatifs applicables aux essais de traction, de dureté et autres essais mécaniques. Destinée aux ingénieurs, responsables qualité, personnels des laboratoires d'essais et de contrôle, étudiants et professionnels du secteur industriel, cette formation contribue à l'amélioration de la qualité, de la fiabilité et de la performance des produits. Les participants bénéficient de supports pédagogiques, d'une attestation de participation ainsi que des travaux pratiques réalisés sur les équipements du laboratoire. Trois sessions sont programmées : du 14 au 16 septembre 2026, du 28 au 30 septembre 2026 et du 12 au 14 octobre 2026."
     },
     {
-      "image": "/porte_ouvert_journe.png",
-      "title": " ",
-      "shortText": "Le CTIME vous invite à participer à sa Journée Portes Ouvertes, une occasion unique de découvrir ses services, ses démonstrations techniques et les métiers du contrôle de la qualité et de la métrologie.",
-      "fullText": "Cette journée est dédiée aux professionnels de l’industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d’entreprise industriels, professionnels de l’automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d’Études, techniciens métrologie et contrôle, responsables R&D. Une journée d’échanges techniques, de networking et de partage d’expertise pour renforcer vos démarches qualité et performance industrielle. ⚠️ Nombre de places limité afin de favoriser des échanges qualitatifs."
+      image: "/retour_en_images_jpo.png",
+      title: "Journée Portes Ouvertes CTIME 2026",
+      shortText: "Une participation remarquable et des échanges enrichissants lors de la Journée Portes Ouvertes organisée par le CTIME le 27 avril 2026.",
+      fullText: "Le Centre Technique Industriel de la Mécanique (CTIME) a organisé, le 27 avril 2026, une Journée Portes Ouvertes marquée par une forte participation de ses partenaires et de nombreuses entreprises issues de divers secteurs industriels. Cet événement a offert une opportunité privilégiée de découverte et d'échange autour des capacités du centre. Les visiteurs ont pu assister à des présentations thématiques portant notamment sur les essais mécaniques, la métrologie 3D et l'étalonnage dimensionnel, enrichies par des démonstrations pratiques illustrant les moyens techniques de pointe du CTIME. La journée s'est déroulée dans un climat d'interaction constructive, favorisant les échanges entre experts et professionnels. Elle a permis de valoriser le savoir-faire du centre et de renforcer ses liens avec son écosystème industriel. La satisfaction des participants confirme la pertinence de cette initiative et consolide le rôle du CTIME en tant qu'acteur de référence au service de l'industrie."
+    },
+    {
+      image: "/porte_ouvert_journe.png",
+      title: " ",
+      shortText: "Le CTIME vous invite à participer à sa Journée Portes Ouvertes, une occasion unique de découvrir ses services, ses démonstrations techniques et les métiers du contrôle de la qualité et de la métrologie.",
+      fullText: "Cette journée est dédiée aux professionnels de l'industrie, de la qualité et de la métrologie. Elle comprend la présentation des services du centre, des démonstrations techniques en conditions réelles, des échanges autour des métiers du contrôle de la qualité, de la métrologie et des essais, ainsi que la découverte des opportunités de collaboration. Public cible : chefs d'entreprise industriels, professionnels de l'automobile et de la mécanique de précision, responsables Qualité, Production et Maintenance, ingénieurs Méthodes et Bureau d'Études, techniciens métrologie et contrôle, responsables R&D. Une journée d'échanges techniques, de networking et de partage d'expertise pour renforcer vos démarches qualité et performance industrielle. ⚠️ Nombre de places limité afin de favoriser des échanges qualitatifs."
     },
 
     {
-      "image": "/visite_ministre.png",
-      "title": "Visite de Monsieur le Ministre de l’Industrie au CTIME",
-      "shortText": "Visite officielle de Monsieur le Ministre de l’Industrie au centre industriel des industries mécaniques et de transformation des métaux, avec présentation de ses capacités et de son rôle dans le soutien du secteur industriel.",
-      "fullText": "Monsieur le Ministre de l’Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d’échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
+      image: "/visite_ministre.png",
+      title: "Visite de Monsieur le Ministre de l'Industrie au CTIME",
+      shortText: "Visite officielle de Monsieur le Ministre de l'Industrie au centre industriel des industries mécaniques et de transformation des métaux, avec présentation de ses capacités et de son rôle dans le soutien du secteur industriel.",
+      fullText: "Monsieur le Ministre de l'Industrie a effectué une visite au centre industriel des industries mécaniques et de transformation des métaux, où une présentation détaillée lui a été faite concernant le centre, ses capacités actuelles ainsi que ses perspectives de développement futur et son rôle dans le soutien du secteur industriel. Cette visite a constitué une opportunité d'échange et de discussion autour des moyens de renforcer les capacités industrielles et de développer ce secteur stratégique. Nos sincères remerciements à tous ceux qui ont contribué à la réussite de cette rencontre."
     },
     {
-      "image": "/Salon mechanica 2026.png",
-      "title": "Salon MECHANICA 2026",
-      "shortText": "La participation du CTIME s’inscrit pleinement dans sa mission de soutien au développement de l’industrie mécanique nationale, en particulier au service de la filière automobile, de la sous-traitance industrielle et du marché de la pièce de rechange (PDR)...",
-      "fullText": "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l’écosystème automobile et de promouvoir des solutions techniques contribuant à l’amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
+      image: "/Salon mechanica 2026.png",
+      title: "Salon MECHANICA 2026",
+      shortText: "La participation du CTIME s'inscrit pleinement dans sa mission de soutien au développement de l'industrie mécanique nationale, en particulier au service de la filière automobile, de la sous-traitance industrielle et du marché de la pièce de rechange (PDR)...",
+      fullText: "À travers sa présence, le centre met en avant son expertise en essais, métrologie dimensionnelle, mesure 3D et accompagnement technique des industriels. Cette participation constitue également une opportunité de renforcer les échanges avec les acteurs de l'écosystème automobile et de promouvoir des solutions techniques contribuant à l'amélioration de la qualité, de la conformité et de la compétitivité des produits industriels.."
     },
     {
       image: "/visite.png",
-      title: " Visite pédagogique de l’Institut d’Optique et de Mécanique de Précision au CTIME",
-      shortText: "Nous avons eu le plaisir d’accueillir au CTIME un groupe d’étudiants accompagnés de leurs professeurs pour une visite technique immersive...",
-      fullText: "Au programme : démonstrations d’essais mécaniques, étalonnage d’instruments de précision, métrologie appliquée et rétro-ingénierie. Une journée riche en échanges et en découvertes, qui illustre parfaitement notre engagement à rapprocher le monde académique de l’univers industriel."
+      title: " Visite pédagogique de l'Institut d'Optique et de Mécanique de Précision au CTIME",
+      shortText: "Nous avons eu le plaisir d'accueillir au CTIME un groupe d'étudiants accompagnés de leurs professeurs pour une visite technique immersive...",
+      fullText: "Au programme : démonstrations d'essais mécaniques, étalonnage d'instruments de précision, métrologie appliquée et rétro-ingénierie. Une journée riche en échanges et en découvertes, qui illustre parfaitement notre engagement à rapprocher le monde académique de l'univers industriel."
     },
 
     {
