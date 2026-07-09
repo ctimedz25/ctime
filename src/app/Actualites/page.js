@@ -6,7 +6,13 @@ import Head from 'next/head';
 
 export default function Actualites() {
   const [articles, setArticles] = useState([
-   
+    {
+      title: "Séminaire-Formatif : Sciences des Matériaux",
+      date: "Actualités / Par admin",
+      img: "/formation_sciences_materiaux.png",
+      description: "Cette formation est destinée aux professionnels de l'industrie, de la qualité, de la maintenance et des laboratoires d'essais souhaitant renforcer leurs compétences en sciences des matériaux. Elle combine des apports théoriques et des travaux pratiques portant sur les propriétés des matériaux, les méthodes d'essais mécaniques et l'interprétation des résultats, tout en intégrant les exigences des référentiels normatifs. Public cible : ingénieurs matériaux, mécanique, production et procédés, responsables Qualité et Maintenance, personnels des laboratoires d'essais et de contrôle, étudiants et jeunes diplômés, ainsi que tout professionnel impliqué dans la sélection, l'évaluation ou la qualification des matériaux. Une formation pratique et interactive permettant d'acquérir des compétences directement applicables en milieu industriel, dispensée par les experts du CTIME. Nombre de places limité par session afin de garantir un accompagnement personnalisé et des échanges de qualité.",
+      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeo5KXXN7m1GE0IyI1P3_IV5R_xr5-UO8rMzoSBD2pcG0f7Ow/viewform?usp=dialog"
+    },
     {
       title: "Journée Portes Ouvertes CTIME 2026",
       date: "Actualités / Par admin",

@@ -18,7 +18,12 @@ export function ModernCarousel() {
   const minSwipeDistance = 50;
 
   const slides = [
-   
+    {
+      image: "/formation_sciences_materiaux.png",
+      title: "Séminaire-Formatif : Sciences des Matériaux",
+      shortText: "Le CTIME organise une Une formation de 3 jours pour maîtriser les fondamentaux des sciences des matériaux et des essais mécaniques.",
+      fullText: "Le Laboratoire des Essais Mécaniques du Centre Technique Industriel de la Mécanique (CTIME) organise un séminaire-formatif consacré aux sciences des matériaux. Cette formation de trois jours vise à fournir aux participants les connaissances fondamentales sur la structure, les propriétés et le comportement des matériaux, ainsi que les principales méthodes d'essais mécaniques et l'interprétation de leurs résultats. Le programme comprend des cours théoriques illustrés, des travaux pratiques en laboratoire et des exercices portant sur les référentiels normatifs applicables aux essais de traction, de dureté et autres essais mécaniques. Destinée aux ingénieurs, responsables qualité, personnels des laboratoires d'essais et de contrôle, étudiants et professionnels du secteur industriel, cette formation contribue à l'amélioration de la qualité, de la fiabilité et de la performance des produits. Les participants bénéficient de supports pédagogiques, d'une attestation de participation ainsi que des travaux pratiques réalisés sur les équipements du laboratoire. Trois sessions sont programmées : du 14 au 16 septembre 2026, du 28 au 30 septembre 2026 et du 12 au 14 octobre 2026."
+    },
     {
       image: "/retour_en_images_jpo.png",
       title: "Journée Portes Ouvertes CTIME 2026",
