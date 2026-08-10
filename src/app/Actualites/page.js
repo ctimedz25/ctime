@@ -6,6 +6,12 @@ import Head from 'next/head';
 
 export default function Actualites() {
   const [articles, setArticles] = useState([
+     {
+      title: "Appel à Communication – CTIME for Metal & Mechanics",
+      date: "Actualités / Par admin",
+      img: "/appel_communication.png",
+      description: "Le Centre Technique des Industries Mécaniques et Transformatrices des Métaux (CTIME) lance un appel à communication pour la prochaine édition de son magazine « CTIME for Metal & Mechanics ». Cette édition est destinée aux chercheurs, enseignants, ingénieurs, doctorants et professionnels des industries mécaniques et transformatrices des métaux souhaitant partager leurs connaissances, leurs travaux et leurs retours d’expérience. Les contributions peuvent porter notamment sur la métrologie industrielle et dimensionnelle, les sciences et l’ingénierie des matériaux, les procédés de fabrication et d’usinage, la transformation des métaux, les essais mécaniques et la caractérisation des matériaux, le contrôle qualité, le SPC, la MSA et la capabilité des procédés, la maintenance industrielle et la fiabilité, les traitements thermiques et de surface, le soudage, la fabrication additive, l’Industrie 4.0, l’intelligence artificielle, la digitalisation, ainsi que la normalisation, la certification et l’accréditation. Les articles attendus doivent être originaux, techniques ou scientifiques, rédigés dans un langage accessible aux ingénieurs et techniciens, illustrés par des figures, schémas, photographies ou résultats expérimentaux et axés sur des applications concrètes et des problématiques industrielles. Le magazine s’adresse notamment aux ingénieurs, techniciens, responsables qualité, métrologues, industriels, chercheurs et étudiants en fin de cycle dans les domaines des industries mécaniques et transformatrices des métaux. Les articles sont à transmettre à l’adresse contact@ctime.dz avant le 30 septembre 2026. Pour plus d’informations, consultez également le site www.ctime.dz.",
+    },
     {
       title: "Séminaire-Formatif : Sciences des Matériaux",
       date: "Actualités / Par admin",
